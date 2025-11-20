@@ -18,7 +18,7 @@ ENV/
 chroma_db/
 
 # Chainlit
-.chainlit/
+.chainlit/translations
 .files/
 
 # IDE

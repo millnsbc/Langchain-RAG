@@ -6,7 +6,7 @@ from langchain_chroma import Chroma
 from langchain_openai import OpenAIEmbeddings, ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_core.messages import HumanMessage, AIMessage
-from config import (
+from src.config import (
     CHROMA_PATH,
     COLLECTION_NAME,
     EMBEDDING_MODEL,
