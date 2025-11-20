@@ -18,8 +18,8 @@ async def main(message: cl.Message):
     # Get chat history
     chat_history = cl.user_session.get("chat_history", [])
     
-    #query rag system
-    response = query_rag(message.content, chat_history=chat_history)
+    #query rag system (wrapped to prevent blocking event loop)
+    response = await cl.make_async(query_rag)(message.content, chat_history=chat_history)
     
     # send answer
     await cl.Message(content=response["answer"]).send()

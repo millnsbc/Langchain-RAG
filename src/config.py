@@ -23,11 +23,11 @@ EMBEDDING_MODEL = "text-embedding-3-small"
 LLM_MODEL = "gpt-4o-mini"
 
 #chromadb settings
-CHROMA_PATH = "./chroma_db"
+CHROMA_PATH = str(project_root / "chroma_db")
 COLLECTION_NAME = "documents"
 
 #data path
-DATA_PATH = "./data"
+DATA_PATH = str(project_root / "data")
 
 #retrieval settings
 CHUNK_SIZE = 400

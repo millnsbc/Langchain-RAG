@@ -1,7 +1,14 @@
 """Document ingestion pipeline for RAG system"""
 
 import os
+import sys
 import logging
+import shutil
+
+#add project root to path for imports
+project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, project_root)
+
 from langchain_community.document_loaders import DirectoryLoader, PyPDFLoader, TextLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_chroma import Chroma
